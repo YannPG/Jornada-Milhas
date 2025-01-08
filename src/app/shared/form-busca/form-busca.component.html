@@ -20,11 +20,35 @@
         </div>
     </form>
     <div class="flex-container">
-        <mat-form-field appearance="outline">
+        <mat-form-field class="input-container" appearance="outline">
             <mat-label>Origem</mat-label>
             <mat-icon matPrefix>flight_takeoff</mat-icon>
             <input matInput placeholder="Origem">
             <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
-          </mat-form-field>
+        </mat-form-field>
+        <button mat-icon-button> 
+            <mat-icon>
+                sync_alt
+            </mat-icon>
+        </button>
+        <mat-form-field class="input-container" appearance="outline">
+            <mat-label>Destino</mat-label>
+            <mat-icon matPrefix>flight_land</mat-icon>
+            <input matInput placeholder="Destino">
+            <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+        </mat-form-field>         
+        <mat-form-field class="input-container" appearance="outline" floatLabel="always">
+            <mat-label>Data de ida</mat-label>
+            <input matInput [matDatepicker]="picker"  placeholder="Selecione">
+            <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+        <mat-form-field class="input-container" appearance="outline" floatLabel="always">
+            <mat-label>Data de volta</mat-label>
+            <input  matInput [matDatepicker]="picker" placeholder="Selecione">
+            <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+        <button mat-raised-button color="primary">Buscar</button>
     </div>
 </app-card>
