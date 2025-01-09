@@ -26,6 +26,7 @@ import { MatMomentDateModule } from '@angular/material-moment-adapter';
 import { ModalComponent } from './shared/modal/modal.component';
 import { MatDialogModule } from '@angular/material/dialog';
 import { BotaoControleComponent } from './shared/botao-controle/botao-controle.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -57,7 +58,8 @@ import { BotaoControleComponent } from './shared/botao-controle/botao-controle.c
     MatInputModule,
     MatDatepickerModule,
     MatMomentDateModule,
-    MatDialogModule
+    MatDialogModule,
+    HttpClientModule
   
   ],
   providers: [],
