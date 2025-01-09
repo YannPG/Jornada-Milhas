@@ -10,15 +10,19 @@
                         <span>1</span>
                     <app-botao-controle operacao="decrementar"></app-botao-controle>
                 </li>
+            </ul>
+            <ul>
                 <li><Strong>Crianças</Strong></li>
-                <li>(Menores que 11 e maiores que 2 anos)</li>
+                <li>(Entre 2 e 11 anos)</li>
                 <li>
                     <app-botao-controle operacao="incrementar"></app-botao-controle>
                         <span>1</span>
                     <app-botao-controle operacao="decrementar"></app-botao-controle>
                 </li>
+            </ul>    
+            <ul>    
                 <li><Strong>Bebês</Strong></li>
-                <li>(Menores que 2 anos)</li>
+                <li>(Até 2 anos)</li>
                 <li>
                     <app-botao-controle operacao="incrementar"></app-botao-controle>
                         <span>1</span>
@@ -27,8 +31,8 @@
             </ul>
         </div>
     </div>
-    <mat-dialog-actions>
-    <button mat-button mat-dialog-close>Close</button>
-    </mat-dialog-actions>
+    <div mat-dialog-actions class="modal-actions">
+        <button color="primary" mat-flat-button mat-dialog-close>BUSCAR</button>
+    </div>
 
 </section>
