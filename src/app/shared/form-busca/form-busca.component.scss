@@ -1,34 +1,20 @@
 .form-busca {
-    margin: 40px 0;
-    display: block;
-    .flex-container {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      margin: 16px 0;
-      
-    }
-
-    mat-label {
-      font-size: 1.3rem;
-      color: #555; 
-    }
-    .input-container {
-      margin-bottom: -1.25em;
-    }
-    .input-date{
-      border-bottom-left-radius: 0px;
-      border-bottom-right-radius: 0px;
-      border-top-left-radius: 4px;
-      border-top-right-radius: 4px;
-      box-sizing: border-box;
-    }
-    .mat-button-toggle-checked {
-      background-color: #F7F2FA;
-    }
-    h2 {
-      font-size: 32px;
-      margin-bottom: 20px;
-    }
-    
+  margin: 40px 0;
+  display: block;
+  .flex-container {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 16px 0;
   }
+  .input-container {
+    margin-bottom: -1.25em;
+  }
+  .mat-button-toggle-checked {
+    background-color: #F7F2FA;
+  }
+  h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+  }
+}

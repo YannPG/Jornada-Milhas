@@ -1,35 +1,21 @@
-<app-banner 
-    src="./assets/img/banner-homepage.png"
+<section class="homepage">
+  <app-banner
+    src="assets/imagens/banner-homepage.png"
     alt="Banner da aplicação Jornada"
-></app-banner>
-<app-container>
-    <h2>
-        Promoções
-    </h2>
+  ></app-banner>
+  <app-container>
     <app-form-busca></app-form-busca>
-    <div class="card-wrapper">    
-        <app-card-busca>
-        </app-card-busca>
-        <app-card-busca>
-        </app-card-busca>
-        <app-card-busca>
-        </app-card-busca>
-        <app-card-busca>
-        </app-card-busca>
-        <app-card-busca>
-        </app-card-busca>
-        <app-card-busca>
-        </app-card-busca>
+    <h2>Promoções</h2>
+    <app-promocoes />
+    <h2>Depoimentos</h2>
+    <div class="card-wrapper">
+      <app-card-depoimento></app-card-depoimento>
+      <app-card-depoimento></app-card-depoimento>
+      <app-card-depoimento></app-card-depoimento>
     </div>
-    <h2>
-        Depoimentos
-    </h2>
-    <div class="depoimento-wrapper">
-        <app-card-depoimento>
-        </app-card-depoimento>
-        <app-card-depoimento>
-        </app-card-depoimento>
-        <app-card-depoimento>
-        </app-card-depoimento>
-    </div>
-</app-container>
+  </app-container>
+  <app-banner
+    src="assets/imagens/banner-homepage-rodape.png"
+    alt="Banner da aplicação Jornada"
+  ></app-banner>
+</section>

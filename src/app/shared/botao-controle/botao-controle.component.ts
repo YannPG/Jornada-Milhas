@@ -6,7 +6,7 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./botao-controle.component.scss']
 })
 export class BotaoControleComponent {
-  @Input() operacao: 'incrementar' | 'decrementar' = 'incrementar';
+  @Input() operacao: 'incrementar' | 'decrementar' = "incrementar";
   @Input() src = '';
   @Input() alt = '';
-} 
+}

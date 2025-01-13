@@ -6,5 +6,5 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./card.component.scss']
 })
 export class CardComponent {
-    @Input() variant: 'primary' |  'secondary' = 'primary'
-} 
+  @Input() variant: 'primary' | 'secondary' = 'primary'
+}

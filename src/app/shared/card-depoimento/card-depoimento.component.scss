@@ -1,33 +1,25 @@
-.card-depoimento{
+.depoimento {
+  max-width: 320px;
+  background-color: #FEF7FF;
+  border: none;
+  img {
+    max-width: 56px;
+    max-height: 56px;
+    margin-top: 16px;
+  }
+  ul {
+    padding: 0;
+    list-style: none;
+    li {
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 24px;
+    }
+  }
+  mat-card-content {
     display: flex;
-    flex-direction: row;
-    max-width: 320px;
-    background-color: #FEF7FF;
-    border: none;
-
-    .imagem-autor-depoimento{
-        max-width: 64px;
-        max-height: 64px;
-        margin-top: 16px;
-    }
-
-    ul{
-        list-style-type: none;
-        padding: 0;
-        margin: 0 0 0 15px;
-        li {
-            font-style: normal;
-            font-weight: 400;
-            font-size: 16px;
-            line-height: 24px;
-        }
-    }
-
-    mat-card-content {
-        display: flex;
-        align-items: start;
-        gap: 16px;
-    }
+    align-items: start;
+    gap: 16px;
+  }
 }
-
-
