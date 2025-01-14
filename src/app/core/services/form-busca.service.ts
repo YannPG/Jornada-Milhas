@@ -18,9 +18,9 @@ export class FormBuscaService {
       origem: new FormControl(null),
       destino: new FormControl(null),
       tipo: new FormControl("Executiva"),
-      adultos: new FormControl(1),
+      adultos: new FormControl(3),
       criancas: new FormControl(0),
-      bebes: new FormControl(0)
+      bebes: new FormControl(1)
      })
   }
 
