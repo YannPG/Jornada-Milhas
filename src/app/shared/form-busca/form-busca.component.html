@@ -14,12 +14,12 @@
       </mat-button-toggle-group>
       <mat-chip (click)="formBuscaService.openDialog()">
         <div class="inner">
-          <mat-icon>check</mat-icon> 1 adulto
+          <mat-icon>check</mat-icon> {{ formBuscaService.getDescricaoPassafeiros() }}
         </div>
       </mat-chip>
       <mat-chip (click)="formBuscaService.openDialog()">
         <div class="inner">
-          <mat-icon>check</mat-icon> Econômica
+          <mat-icon>check</mat-icon> {{ formBuscaService.obterControle('tipo').value }}
         </div>
       </mat-chip>
     </div>
@@ -29,7 +29,7 @@
         iconePrefixo="flight_takeoff"
         [control]="formBuscaService.obterControle('origem')"
       />
-      <button mat-icon-button>
+      <button mat-icon-button (click)="formBuscaService.trocarOrigemDestino()">
         <mat-icon>sync_alt</mat-icon>
       </button>
       <app-dropdown-uf 
