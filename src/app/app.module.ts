@@ -32,6 +32,7 @@ import { PromocoesComponent } from './pages/home/promocoes/promocoes.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { DropdownUfComponent } from './shared/form-busca/dropdown-uf/dropdown-uf.component';
 import { SeletorPassageiroComponent } from './shared/seletor-passageiro/seletor-passageiro.component';
+import { LoginComponent } from './pages/login/login.component';
 
 @NgModule({
   declarations: [
@@ -49,7 +50,8 @@ import { SeletorPassageiroComponent } from './shared/seletor-passageiro/seletor-
     BotaoControleComponent,
     PromocoesComponent,
     DropdownUfComponent,
-    SeletorPassageiroComponent
+    SeletorPassageiroComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
