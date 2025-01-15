@@ -23,14 +23,16 @@
                     <mat-form-field appearance="outline">
                         <mat-label>E-mail</mat-label>
                         <input formControlName="email" matInput type="email" placeholder="Digite seu email">
-                    </mat-form-field>
+                        <mat-error *ngIf="loginForm.get('email')?.errors?.['required']">E-mail obrigatório</mat-error>
+                        <mat-error *ngIf="loginForm.get('email')?.errors?.['email']">Formato de E-mail inválido</mat-error>                    </mat-form-field>
                     <mat-form-field appearance="outline">
                         <mat-label>Senha</mat-label>
                         <input formControlName="senha" matInput type="password" placeholder="Digite sua senha">
+                        <mat-error *ngIf="loginForm.get('senha')?.errors?.['required']">Senha é obrigatória</mat-error>
                     </mat-form-field>
                 </mat-card-content>
                 <mat-card-actions>
-                    <button (click)="login()" mat-flat-button color="primary">
+                    <button [disabled]="loginForm.invalid" (click)="login()" mat-flat-button color="primary">
                         ACESSAR MINHA CONTA
                     </button>
                 </mat-card-actions>
