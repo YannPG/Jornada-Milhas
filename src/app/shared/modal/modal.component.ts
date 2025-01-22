@@ -7,7 +7,7 @@ import { FormBuscaService } from 'src/app/core/services/form-busca.service';
   styleUrls: ['./modal.component.scss']
 })
 export class ModalComponent {
-  constructor(public formBuscaService: FormBuscaService){
-
+  constructor (public formBuscaService: FormBuscaService) {
+    
   }
 }

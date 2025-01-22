@@ -21,28 +21,38 @@ export class FormBuscaService {
       adultos: new FormControl(3),
       criancas: new FormControl(0),
       bebes: new FormControl(1)
-     })
+    })
   }
 
-  getDescricaoPassafeiros ():string{
-    let descricao = '';
+  getDescricaoPassageiros (): string {
+    let descricao = ''
 
-    const adultos = this.formBusca.get('adultos')?.value
-    if(adultos && adultos > 0){
-      descricao += `${adultos} adulto${adultos > 1 ? 's': ''}`;
+    const adultos = this.formBusca.get('adultos')?.value;
+    if (adultos && adultos > 0) {
+      descricao += `${adultos} adulto${adultos > 1 ? 's' : ''}`;
     }
-
-    const criancas = this.formBusca.get('criancas')?.value
-    if(criancas && criancas > 0 ){
-      descricao += `${criancas} crianca${criancas> 1 ? 's': ''}`;
+  
+    const criancas = this.formBusca.get('criancas')?.value;
+    if (criancas && criancas > 0) {
+      descricao += `${descricao ? ', ' : ''}${criancas} criança${criancas > 1 ? 's' : ''}`;
     }
-
-    const bebes = this.formBusca.get('bebes')?.value
-    if(bebes && bebes > 0){
-      descricao += `${bebes} bebes${bebes> 1 ? 's': ''}`;
+  
+    const bebes = this.formBusca.get('bebes')?.value;
+    if (bebes && bebes > 0) {
+      descricao += `${descricao ? ', ' : ''}${bebes} bebê${bebes > 1 ? 's' : ''}`;
     }
-
+  
     return descricao
+  }
+
+  trocarOrigemDestino(): void {
+    const origem = this.formBusca.get('origem')?.value;
+    const destino = this.formBusca.get('destino')?.value;
+  
+    this.formBusca.patchValue({
+      origem: destino,
+      destino: origem
+    });
   }
 
   obterControle(nome:string): FormControl {
@@ -53,28 +63,18 @@ export class FormBuscaService {
     return control as FormControl;
   }
 
-  alterarTipo(evento: MatChipSelectionChange, tipo:string){
-    if(evento.selected){
+  alterarTipo (evento: MatChipSelectionChange, tipo: string) {
+    if (evento.selected) {
       this.formBusca.patchValue({
         tipo,
       })
-      console.log('Tipo de passage alterado para: ', tipo)
+      console.log('Tipo de passagem alterado para: ', tipo)
     }
   }
 
   openDialog() {
     this.dialog.open(ModalComponent, {
       width: '50%'
-    })
-  }
-
-  trocarOrigemDestino():void {
-    const origem = this.formBusca.get('origem')?.value;
-    const destino = this.formBusca.get('destino')?.value;
-
-    this.formBusca.patchValue({
-      origem: destino,
-      destino: origem
     })
   }
 }

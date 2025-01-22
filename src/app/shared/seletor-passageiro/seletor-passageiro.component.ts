@@ -1,4 +1,4 @@
-import { Component, forwardRef, Input } from '@angular/core';
+import { Component, Input, forwardRef } from '@angular/core';
 import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 
 @Component({
@@ -9,43 +9,43 @@ import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
     {
       provide: NG_VALUE_ACCESSOR,
       useExisting: forwardRef(() => SeletorPassageiroComponent),
-      multi:true
+      multi: true
     }
   ]
 })
-export class SeletorPassageiroComponent implements ControlValueAccessor{
-  
-  @Input() titulo:string = '';
-  @Input() subtitulo:string = '';
+export class SeletorPassageiroComponent implements ControlValueAccessor {
 
-  value: number = 0;
+  @Input() titulo: string = ''
+  @Input() subtitulo: string = ''
+
+  value: number = 0
   onChange = (val: number) => {}
   onTouch = () => {}
 
   writeValue(val: any): void {
-    this.value = val;
+    this.value = val
   }
   registerOnChange(fn: any): void {
-    this.onChange = fn;
+    this.onChange = fn
   }
   registerOnTouched(fn: any): void {
-    this.onTouch = fn;
+    this.onChange = fn
   }
   setDisabledState?(isDisabled: boolean): void {
-    throw new Error('Method not implemented.');
+    
   }
 
-  incrementar (){
-    this.value += 1;
+  incrementar () {
+    this.value += 1
     this.onChange(this.value)
-    this.onTouch
+    this.onTouch()
   }
 
-  decrementar(){
-    if(this.value>0){
-      this.value -= 1;
+  decrementar () {
+    if (this.value > 0) {
+      this.value -= 1
       this.onChange(this.value)
-      this.onTouch
+      this.onTouch()
     }
   }
 

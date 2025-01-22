@@ -14,37 +14,34 @@
       </mat-button-toggle-group>
       <mat-chip (click)="formBuscaService.openDialog()">
         <div class="inner">
-          <mat-icon>check</mat-icon> {{ formBuscaService.getDescricaoPassafeiros() }}
+          <mat-icon>check</mat-icon> {{formBuscaService.getDescricaoPassageiros()}}
         </div>
       </mat-chip>
       <mat-chip (click)="formBuscaService.openDialog()">
         <div class="inner">
-          <mat-icon>check</mat-icon> {{ formBuscaService.obterControle('tipo').value }}
+          <mat-icon>check</mat-icon> {{formBuscaService.obterControle('tipo').value}}
         </div>
       </mat-chip>
     </div>
     <div class="flex-container">
       <div class="drop-container">
-        <app-dropdown-uf 
-          label="Origem" 
-          iconePrefixo="flight_takeoff"
+        <app-dropdown-uf
+          label="Origem"
           placeholder="Origem"
+          iconePrefixo="flight_takeoff"
           [control]="formBuscaService.obterControle('origem')"
         />
       </div>
-
-      <button mat-icon-button (click)="formBuscaService.trocarOrigemDestino()">
+      <button mat-icon-button (click)="formBuscaService.trocarOrigemDestino()" >
         <mat-icon>sync_alt</mat-icon>
       </button>
       <div class="drop-container">
-        <app-dropdown-uf 
-          label="Destino" 
+        <app-dropdown-uf
+          label="Destino"
           iconePrefixo="flight_land"
-          placeholder="Destino"
-          [control]="formBuscaService.obterControle('destino')"  
+          [control]="formBuscaService.obterControle('destino')"
         />
       </div>
-
       <mat-form-field class="input-container" appearance="outline">
         <mat-label>Data de ida</mat-label>
         <input matInput [matDatepicker]="ida">

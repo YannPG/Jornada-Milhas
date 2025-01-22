@@ -1,27 +1,42 @@
-# JornadaMilhas
+![Jornada Milhas](thumbnail.png)
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.0.0.
+# Jornada Milhas
 
-## Development server
+O Jornada Milhas é uma StartUP. 
+Nesse momento, é um MVP que tá só começando e ainda tem muitas funcionalidades novas para serem desenvolvidas.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+<img src="screenshot.png" alt="Imagem do Jornada Milhas" width="50%">
 
-## Code scaffolding
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## 🔨 Funcionalidades do projeto
 
-## Build
+Nesse primeiro momento, nós temos a página que foi idealizada como a primeiro entrega do time de desenvolvimento.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Durante o curso, nós vamos desenvolver o controle do formulário de busca. 
+O desafio é criar um componente que é controlado por um FormControl e centralizar o controle de estado do formulário de busca, onde temos parte dentro do formulário e parte dentro da modal.
 
-## Running unit tests
+O [Figma dessa aplicação você encontra aqui](https://www.figma.com/file/SI696t31Q9zlsXKttCoqKP/Angular%3A-Componentização-e-Design-com-Angular-Material-%7C-Jornada-Milhas?type=design&node-id=4-6408&mode=design&t=mmbAh5QEafSRIGqQ-0).
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## ✔️ Técnicas e tecnologias utilizadas
 
-## Running end-to-end tests
+Se liga nessa lista de tudo que usaremos nesse curso:
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+- `Angular`
+- `Angular CLI`
+- `Angular Material`
+- `Figma`
 
-## Further help
+E muito mais!
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## 🛠️ Abrir e rodar o projeto
+
+Para abrir e rodar o projeto, execute `npm i` para instalar as dependências e `ng serve` para iniciar o projeto.
+
+Depois, acesse <a href="http://localhost:4200/">http://localhost:4200/</a> no seu navegador.
+
+O backend utilizado você encontra [aqui](https://github.com/viniciosneves/jornada-milhas-api).
+
+## 📚 Mais informações do curso
+
+O Jornada Milhas é uma StartUP fictícia utilizada nesse curso da Alura.
+A ideia principal desse curso é evoluir ainda mais os conhecimentos em Angular e estilização de componentes.

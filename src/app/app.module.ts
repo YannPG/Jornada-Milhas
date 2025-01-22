@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
+import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './shared/header/header.component';
 import { BannerComponent } from './shared/banner/banner.component';
@@ -23,21 +24,24 @@ import { MatInputModule } from '@angular/material/input';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
 import { ModalComponent } from './shared/modal/modal.component';
-import {MatDialogModule} from '@angular/material/dialog';
+import { MatDialogModule } from '@angular/material/dialog';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
+
 import { BotaoControleComponent } from './shared/botao-controle/botao-controle.component';
 import { HttpClientModule } from '@angular/common/http';
 import { PromocoesComponent } from './pages/home/promocoes/promocoes.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { DropdownUfComponent } from './shared/dropdown-uf/dropdown-uf.component';
 import { SeletorPassageiroComponent } from './shared/seletor-passageiro/seletor-passageiro.component';
+import { DepoimentosComponent } from './pages/home/depoimentos/depoimentos.component';
 import { LoginComponent } from './pages/login/login.component';
-import { AppRoutingModule } from './app-routing.module';
 import { FormBaseComponent } from './shared/form-base/form-base.component';
 import { MatRadioModule } from '@angular/material/radio';
 import { MatDividerModule } from '@angular/material/divider';
-import { DropdownUfComponent } from './shared/dropdown-uf/dropdown-uf.component';
-import { CadastroComponent } from './pages/cadastro/cadastro.component';
 import { MatCheckboxModule } from '@angular/material/checkbox';
+import { CadastroComponent } from './pages/cadastro/cadastro.component';
+import { PerfilComponent } from './pages/perfil/perfil.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -55,13 +59,15 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
     PromocoesComponent,
     DropdownUfComponent,
     SeletorPassageiroComponent,
+    DepoimentosComponent,
     LoginComponent,
     FormBaseComponent,
-    CadastroComponent
+    CadastroComponent,
+    PerfilComponent
   ],
   imports: [
-    AppRoutingModule,
     BrowserModule,
+    AppRoutingModule,
     BrowserAnimationsModule,
     MatToolbarModule,
     MatButtonModule,
@@ -80,7 +86,7 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
     MatRadioModule,
     MatDividerModule,
     MatCheckboxModule
-],
+  ],
   providers: [],
   bootstrap: [AppComponent]
 })
