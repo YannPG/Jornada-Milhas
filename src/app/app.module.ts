@@ -43,6 +43,12 @@ import { CadastroComponent } from './pages/cadastro/cadastro.component';
 import { PerfilComponent } from './pages/perfil/perfil.component';
 import { AutenticacaoInterceptor } from './core/interceptors/autenticacao.interceptor';
 import { BuscaComponent } from './pages/busca/busca.component';
+import { FiltrosComplementaresComponent } from './shared/form-busca/filtros-complementares/filtros-complementares.component';
+import { CompanhiasComponent } from './shared/form-busca/filtros-complementares/companhias/companhias.component';
+import { ParadasComponent } from './shared/form-busca/filtros-complementares/paradas/paradas.component';
+import { PrecosComponent } from './shared/form-busca/filtros-complementares/precos/precos.component';
+import { LabelComponent } from './shared/label/label.component';
+import { MatSliderModule } from '@angular/material/slider';
 
 @NgModule({
   declarations: [
@@ -66,7 +72,12 @@ import { BuscaComponent } from './pages/busca/busca.component';
     FormBaseComponent,
     CadastroComponent,
     PerfilComponent,
-    BuscaComponent
+    BuscaComponent,
+    FiltrosComplementaresComponent,
+    CompanhiasComponent,
+    ParadasComponent,
+    PrecosComponent,
+    LabelComponent
   ],
   imports: [
     BrowserModule,
@@ -88,7 +99,8 @@ import { BuscaComponent } from './pages/busca/busca.component';
     MatAutocompleteModule,
     MatRadioModule,
     MatDividerModule,
-    MatCheckboxModule
+    MatCheckboxModule,
+    MatSliderModule
   ],
   providers: [{
     provide: HTTP_INTERCEPTORS,
