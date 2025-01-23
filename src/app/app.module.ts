@@ -43,7 +43,6 @@ import { CadastroComponent } from './pages/cadastro/cadastro.component';
 import { PerfilComponent } from './pages/perfil/perfil.component';
 import { AutenticacaoInterceptor } from './core/interceptors/autenticacao.interceptor';
 import { BuscaComponent } from './pages/busca/busca.component';
-import { PassagemComponent } from './shared/passagem/passagem.component';
 
 @NgModule({
   declarations: [
@@ -67,8 +66,7 @@ import { PassagemComponent } from './shared/passagem/passagem.component';
     FormBaseComponent,
     CadastroComponent,
     PerfilComponent,
-    BuscaComponent,
-    PassagemComponent
+    BuscaComponent
   ],
   imports: [
     BrowserModule,

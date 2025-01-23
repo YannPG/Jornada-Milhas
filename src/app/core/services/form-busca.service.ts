@@ -1,9 +1,8 @@
 import { Injectable } from '@angular/core';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { FormControl, FormGroup } from '@angular/forms';
 import { MatChipSelectionChange } from '@angular/material/chips';
 import { MatDialog } from '@angular/material/dialog';
 import { ModalComponent } from 'src/app/shared/modal/modal.component';
-import { DadosBusca, UnidadeFederativa } from '../types/type';
 
 @Injectable({
   providedIn: 'root'
@@ -13,29 +12,15 @@ export class FormBuscaService {
   formBusca: FormGroup;
 
   constructor(private dialog: MatDialog) { 
-    const somenteIda = new FormControl(false, [Validators.required])
-    const dataVolta = new FormControl(null, [Validators.required])
 
     this.formBusca = new FormGroup({
-      somenteIda,
-      origem: new FormControl(null, [Validators.required]),
-      destino: new FormControl(null, [Validators.required]),
+      somenteIda: new FormControl(false),
+      origem: new FormControl(null),
+      destino: new FormControl(null),
       tipo: new FormControl("Executiva"),
       adultos: new FormControl(3),
       criancas: new FormControl(0),
-      bebes: new FormControl(1),
-      dataIda: new FormControl(null, [Validators.required]),
-      dataVolta
-    })
-    somenteIda.valueChanges.subscribe(somenteIda => {
-      if(somenteIda){
-        dataVolta.disable();
-        dataVolta.setValidators(null)
-      }else{
-        dataVolta.enable();
-        dataVolta.setValidators([Validators.required])
-      }
-      dataVolta.updateValueAndValidity
+      bebes: new FormControl(1)
     })
   }
 
@@ -70,33 +55,12 @@ export class FormBuscaService {
     });
   }
 
-  obterControle<T>(nome:string): FormControl {
+  obterControle(nome:string): FormControl {
     const control = this.formBusca.get(nome);
     if (!control) {
       throw new Error(`FormControl com nome "${nome}" não existe.`);
     }
-    return control as FormControl<T>;
-  }
-
-  obterDadosBusca(): DadosBusca {
-    const dataIdaControl = this.obterControle<Date>('dataIda');
-    const dadosBusca: DadosBusca = {
-      pagina: 1,
-      porPagina: 50,
-      dataIda: dataIdaControl.value.toISOString(),
-      passageirosAdultos: this.obterControle<number>('adultos').value,
-      passageirosCriancas: this.obterControle<number>('criancas').value,
-      passageirosBebes: this.obterControle<number>('bebes').value,
-      somenteIda: this.obterControle<boolean>('somenteIda').value,
-      origemId: this.obterControle<UnidadeFederativa>('origem').value.id,
-      destinoId: this.obterControle<UnidadeFederativa>('destino').value.id,
-      tipo: this.obterControle<string>('tipo').value,
-    }
-    const dataVoltaControl = this.obterControle<Date>('dataVolta');
-    if (dataVoltaControl.value) {
-      dadosBusca.dataVolta = dataVoltaControl.value.toISOString();
-    }
-    return dadosBusca
+    return control as FormControl;
   }
 
   alterarTipo (evento: MatChipSelectionChange, tipo: string) {
@@ -112,9 +76,5 @@ export class FormBuscaService {
     this.dialog.open(ModalComponent, {
       width: '50%'
     })
-  }
-
-  get formEstaValido(){
-    return this.formBusca.valid
   }
 }
