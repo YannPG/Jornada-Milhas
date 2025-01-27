@@ -26,6 +26,7 @@ import { MatNativeDateModule } from '@angular/material/core';
 import { ModalComponent } from './shared/modal/modal.component';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
+import { MatSliderModule } from '@angular/material/slider';
 
 import { BotaoControleComponent } from './shared/botao-controle/botao-controle.component';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
@@ -43,12 +44,13 @@ import { CadastroComponent } from './pages/cadastro/cadastro.component';
 import { PerfilComponent } from './pages/perfil/perfil.component';
 import { AutenticacaoInterceptor } from './core/interceptors/autenticacao.interceptor';
 import { BuscaComponent } from './pages/busca/busca.component';
-import { FiltrosComplementaresComponent } from './shared/form-busca/filtros-complementares/filtros-complementares.component';
-import { CompanhiasComponent } from './shared/form-busca/filtros-complementares/companhias/companhias.component';
+import { PassagemComponent } from './shared/passagem/passagem.component';
 import { ParadasComponent } from './shared/form-busca/filtros-complementares/paradas/paradas.component';
+import { CompanhiasComponent } from './shared/form-busca/filtros-complementares/companhias/companhias.component';
 import { PrecosComponent } from './shared/form-busca/filtros-complementares/precos/precos.component';
-import { LabelComponent } from './shared/label/label.component';
-import { MatSliderModule } from '@angular/material/slider';
+import { LabelComponent } from './shared/form-busca/filtros-complementares/label/label.component';
+import { FiltrosComplementaresComponent } from './shared/form-busca/filtros-complementares/filtros-complementares.component';
+import { PassagemDestaqueComponent } from './shared/passagem-destaque/passagem-destaque.component';
 
 @NgModule({
   declarations: [
@@ -73,11 +75,13 @@ import { MatSliderModule } from '@angular/material/slider';
     CadastroComponent,
     PerfilComponent,
     BuscaComponent,
-    FiltrosComplementaresComponent,
-    CompanhiasComponent,
+    PassagemComponent,
     ParadasComponent,
+    CompanhiasComponent,
     PrecosComponent,
-    LabelComponent
+    LabelComponent,
+    FiltrosComplementaresComponent,
+    PassagemDestaqueComponent
   ],
   imports: [
     BrowserModule,
